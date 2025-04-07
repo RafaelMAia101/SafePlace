@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>SafePlace</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>SafePlace</h1>
+    <p>Para a proteçâo e segurança de todos</p>
+  </header>
+
+  <nav>
+    <a href="#denuncia">Denúncia</a>
+    <a href="#onibus">Linhas de Ônibus</a>
+    <a href="#noticias">Notícias</a>
+  </nav>
+
+  <div class="container">
+    {% if mensagem %}
+      <p style="color: green;">{{ mensagem }}</p>
+    {% endif %}
+    <section id="denuncia">
+      <h2>Denúncia</h2>
+      <form action="/denuncia" method="POST">
+        <textarea name="denuncia" rows="5" placeholder="Descreva sua denúncia aqui..."></textarea>
+        <button type="submit">Enviar Denúncia</button>
+      </form>
+    </section>
+
+    <section id="onibus">
+      <h2>Linhas de Ônibus</h2>
+      <input type="text" placeholder="Digite o número ou nome da linha...">
+      <button>Buscar</button>
+    </section>
+
+    <section id="noticias">
+      <h2>Notícias</h2>
+      <ul>
+        <li><strong>Exemplos de noticias </strong></li>
+        <li><strong>Nova linha expressa conecta bairros afastados ao centro.</strong></li>
+        <li><strong>Obras de melhoria começam na Avenida Principal.</strong></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
