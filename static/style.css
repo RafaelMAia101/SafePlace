@@ -1,19 +1,19 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #cfc2c9;
   margin: 0;
   color: #333;
 }
 
 header {
-  background-color: #1e88e5;
+  background-color: #f2e7db;
   color: white;
   text-align: center;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 nav {
-  background-color: #1565c0;
+  background-color: #573379;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -44,7 +44,7 @@ textarea, input, button {
 }
 
 button {
-  background-color: #1e88e5;
+  background-color: #58347b;
   color: white;
   cursor: pointer;
 }

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-BR"><head>
   <meta charset="UTF-8">
   <title>SafePlace</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <header>
-    <img src="{{ url_for('static', filename='LogoFinal.png') }}" alt="Logo do Site" style="height: 60px;">
-    <h1>SafePlace</h1>
-    <p>Para a proteçâo e segurança de todos</p>
+    <img src="/static/LogoFinal.png" alt="Logo do Site" style="height: 400px;">
+    <p style="
+    height: 90;
+    color: #553979;
+    font-weight: bold;
+">Para a proteçâo e segurança de todos</p>
+    
+    
   </header>
 
   <nav>
@@ -19,9 +23,7 @@
   </nav>
 
   <div class="container">
-    {% if mensagem %}
-      <p style="color: green;">{{ mensagem }}</p>
-    {% endif %}
+    
     <section id="denuncia">
       <h2>Denúncia</h2>
       <form action="/denuncia" method="POST">
